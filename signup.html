@@ -245,13 +245,13 @@
             <article>
                 <div class="loginpage">
                     <h2>회원가입</h2>
-                    <form action="login.html">
-                        <input type="text" placeholder="아이디">
-                        <input type="password" placeholder="비밀번호">
-                        <input type="tel" placeholder="전화번호">
-                        <input type="email" placeholder="이메일">
+                    <form onsubmit="registerUser(event)">
+                        <input type="text" id="username" placeholder="아이디" required>
+                        <input type="password" id="password" placeholder="비밀번호" required>
+                        <input type="tel" id="phone" placeholder="전화번호" required>
+                        <input type="email" id="email" placeholder="이메일" required>
                         <input type="submit" value="가입하기">
-                    </form>                    
+                    </form>
                     <p>이미 회원이신가요? <a href="login.html" class="register-link">로그인</a></p>
                 </div>
             </article>
@@ -267,6 +267,27 @@
             </ul>
         </nav>
     </footer>
+
+    <script>
+        function registerUser(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var phone = document.getElementById('phone').value;
+            var email = document.getElementById('email').value;
+
+            var user = {
+                username: username,
+                password: password,
+                phone: phone,
+                email: email
+            };
+
+            localStorage.setItem('user', JSON.stringify(user));
+            alert('회원가입이 완료되었습니다!');
+            window.location.href = 'login.html';
+        }
+    </script>
 </body>
 
 </html>
