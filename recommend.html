@@ -96,6 +96,12 @@
         .shoplist figure img {
             height: 180px;
             width: 200px;
+            cursor: pointer;
+        }
+
+        .enlarged {
+            transform: scale(2);
+            transition: transform 0.3s ease;
         }
 
         #foot {
@@ -212,14 +218,14 @@
 
         <section id="shoplist">
             <article>
-                    <div class="shoplist">
-                        <header>
-                            <h3>라리에또</h3>
-                        </header>
-                        <figure>
-                            <img src="라리에또.jpg">
-                        </figure>
-                    </div>
+                <div class="shoplist">
+                    <header>
+                        <h3>라리에또</h3>
+                    </header>
+                    <figure>
+                        <img src="라리에또.jpg" onclick="toggleSize(this)">
+                    </figure>
+                </div>
             </article>
 
             <article>
@@ -228,7 +234,7 @@
                         <h3>카츠리</h3>
                     </header>
                     <figure>
-                        <img src="카츠리.jpg">
+                        <img src="카츠리.jpg" onclick="toggleSize(this)">
                     </figure>
                 </div>
             </article>
@@ -239,7 +245,7 @@
                         <h3>명륜진사갈비</h3>
                     </header>
                     <figure>
-                        <img src="명륜진사갈비.jpg">
+                        <img src="명륜진사갈비.jpg" onclick="toggleSize(this)">
                     </figure>
                 </div>
             </article>
@@ -250,7 +256,7 @@
                         <h3>별난쭈꾸미</h3>
                     </header>
                     <figure>
-                        <img src="별난쭈꾸미.jpg">
+                        <img src="별난쭈꾸미.jpg" onclick="toggleSize(this)">
                     </figure>
                 </div>
             </article>
@@ -261,7 +267,7 @@
                         <h3>명신관지하식당</h3>
                     </header>
                     <figure>
-                        <img src="명신관지하식당.jpg">
+                        <img src="명신관지하식당.jpg" onclick="toggleSize(this)">
                     </figure>
                 </div>
             </article>
@@ -272,7 +278,7 @@
                         <h3>온카츠</h3>
                     </header>
                     <figure>
-                        <img src="온카츠.jpg">
+                        <img src="온카츠.jpg" onclick="toggleSize(this)">
                     </figure>
                 </div>
             </article>
@@ -288,6 +294,12 @@
             </ul>
         </nav>
     </footer>
+
+    <script>
+        function toggleSize(img) {
+            img.classList.toggle('enlarged');
+        }
+    </script>
 </body>
 
 </html>
