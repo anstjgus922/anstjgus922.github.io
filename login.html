@@ -243,9 +243,9 @@
             <article>
                 <div class="loginpage">
                     <h2>로그인</h2>
-                    <form action="shoplist.html">
-                        <input type="text" placeholder="아이디">
-                        <input type="password" placeholder="비밀번호">
+                    <form onsubmit="loginUser(event)">
+                        <input type="text" id="login-username" placeholder="아이디" required>
+                        <input type="password" id="login-password" placeholder="비밀번호" required>
                         <input type="submit" value="로그인">
                     </form>
                     <a href="signup.html" class="register-link">회원가입</a>
@@ -263,6 +263,23 @@
             </ul>
         </nav>
     </footer>
+
+    <script>
+        function loginUser(event) {
+            event.preventDefault();
+            var username = document.getElementById('login-username').value;
+            var password = document.getElementById('login-password').value;
+
+            var storedUser = JSON.parse(localStorage.getItem('user'));
+
+            if (storedUser && storedUser.username === username && storedUser.password === password) {
+                alert('로그인 성공!');
+                window.location.href = 'shoplist.html';
+            } else {
+                alert('아이디 또는 비밀번호가 일치하지 않습니다.');
+            }
+        }
+    </script>
 </body>
 
 </html>
