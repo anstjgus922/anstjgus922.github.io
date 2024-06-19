@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>2310983 문서현</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #top_header {
+            background-color: rgb(238, 192, 40);
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        #navi {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        #navi li {
+            position: relative;
+            padding: 0 20px;
+        }
+
+        #navi ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            text-align: center;
+            background-color: rgb(238, 192, 40);
+            color: black;
+            width: 150px;
+        }
+
+        #navi li:hover>ul {
+            display: block;
+        }
+
+        #navi li ul li {
+            padding: 10px;
+            text-align: left;
+        }
+
+        #navi li:hover>a {
+            background-color: black;
+            color: rgb(238, 192, 40);
+        }
+
+        li,
+        ul {
+            list-style-type: none;
+            text-align: center;
+            font-weight: bolder;
+            color: black;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            padding: 10px;
+            gap: 1rem;
+        }
+
+        #shoplist {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            overflow-x: auto;
+            text-align: center;
+        }
+
+        #shoplist p {
+            padding-top: 10px;
+        }
+
+        .shoplist {
+            border: 2px solid rgb(238, 192, 40);
+            border-radius: 10px;
+            padding: 20px;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 550px;
+        }
+
+        .shoplist header h2 {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .shoplist figure img {
+            height: 180px;
+            width: 180px;
+        }
+
+        .shoplist form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .shoplist input[type="text"] {
+            width: 900px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid rgb(238, 192, 40);
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .shoplist input[type="submit"] {
+            width: 400px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: rgb(238, 192, 40);
+            color: black;
+            border: 2px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .shoplist input[type="submit"]:hover {
+            background-color: black;
+            color: rgb(238, 192, 40);
+        }
+
+        #foot {
+            background-color: rgb(238, 192, 40);
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        #foot p {
+            color: black;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        #reviewcategory {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: rgb(238, 192, 40);
+        }
+
+        #reviewcategory aside h2 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        #reviewcategory aside a {
+            display: block;
+            text-align: center;
+            color: black;
+            padding: 10px 0;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(238, 192, 40);
+            color: black;
+            font-size: 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 20px auto 0;
+            width: 250px;
+            cursor: pointer;
+            text-decoration: none !important;
+            margin-top: 320px;
+        }
+
+        .btn:hover {
+            background-color: black;
+            color: rgb(238, 192, 40) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="top_header">
+        <hgroup id="title">
+            <h1>미식로그</h1>
+            <p>맛의 발견과 기록</p>
+        </hgroup>
+        <nav>
+            <ul id="navi">
+                <li><a href="#">맛집목록</a>
+                    <ul>
+                        <li><a href="shoplist.html">모든장소</a></li>
+                        <li><a href="#">카페</a></li>
+                        <li><a href="#">밥집</a></li>
+                        <li><a href="#">술집</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">맛집지도</a>
+                    <ul>
+                        <li><a href="map.html">모든장소</a></li>
+                        <li><a href="#">카페</a></li>
+                        <li><a href="#">밥집</a></li>
+                        <li><a href="#">술집</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">리뷰</a>
+                    <ul>
+                        <li><a href="search.html">리뷰검색</a></li>
+                        <li><a href="reviewwrite.html">리뷰작성</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">커뮤니티</a>
+                    <ul>
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="recommend.html">맛집추천</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside id="reviewcategory">
+            <aside>
+                <h2>맛집지도</h2>
+                <a href="map.html">- 모든장소</a>
+                <a href="#">- 카페</a>
+                <a href="#">- 밥집</a>
+                <a href="#">- 술집</a>
+                <a href="mypage.html" class="btn">마이페이지</a>
+            </aside>
+        </aside>
+
+        <section id="shoplist">
+            <article>
+                <div class="shoplist">
+                    <header>
+                        <h2>작성된 리뷰목록</h2>
+                    </header>
+                    <h3>포36거리(포돈)</h3>
+                    <figure>
+                        <img src="podone.jpg">
+                    </figure>
+                    <h3>본솔</h3>
+                    <figure>
+                        <img src="bonsol.jpg">
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <div class="shoplist">
+                    <h2>등록한 맛집을 지도에서 확인하세요.</h2>
+                    <article id="map" style="width: 920px; height: 450px;">
+                    </article>
+                    <script type="text/javascript"
+                        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=aaf9c176e520ab89832d9e3a4bc9d948"></script>
+                    <script>
+                        var mapContainer = document.getElementById('map');
+                        var mapOption = {
+                            center: new kakao.maps.LatLng(33.450701, 126.570667),
+                            level: 3
+                        };
+                        var map = new kakao.maps.Map(mapContainer, mapOption); 
+                    </script>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <footer>
+        <nav id="foot">
+            <ul>
+                <li>
+                    <p>문의 : 010-1234-5678 / msh176125@gamil.com<br>(c)2024.msh176125</p>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

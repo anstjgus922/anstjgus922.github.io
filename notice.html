@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>2310983 문서현</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #top_header {
+            background-color: rgb(238, 192, 40);
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        #navi {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        #navi li {
+            position: relative;
+            padding: 0 20px;
+        }
+
+        #navi ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            text-align: center;
+            background-color: rgb(238, 192, 40);
+            color: black;
+            width: 150px;
+        }
+
+        #navi li:hover>ul {
+            display: block;
+        }
+
+        #navi li ul li {
+            padding: 10px;
+            text-align: left;
+        }
+
+        #navi li:hover>a {
+            background-color: black;
+            color: rgb(238, 192, 40);
+        }
+
+        li,
+        ul {
+            list-style-type: none;
+            text-align: center;
+            font-weight: bolder;
+            color: black;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            padding: 10px;
+            gap: 1rem;
+        }
+
+        #shoplist {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            overflow-x: auto;
+            grid-auto-rows: auto;
+        }
+
+        .shoplist {
+            border: 2px solid rgb(238, 192, 40);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 50px;
+        }
+
+        .shoplist h3 {
+            font-size: large;
+            font-weight: bold;
+            margin: 12px;
+        }
+
+        #foot {
+            background-color: rgb(238, 192, 40);
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        #foot p {
+            color: black;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        #shopcategory {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: rgb(238, 192, 40);
+        }
+
+        #shopcategory aside h2 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        #shopcategory aside a {
+            display: block;
+            text-align: center;
+            color: black;
+            padding: 10px 0;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(238, 192, 40);
+            color: black;
+            font-size: 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 20px auto 0;
+            width: 250px;
+            cursor: pointer;
+            text-decoration: none !important;
+            margin-top: 400px;
+        }
+
+        .btn:hover {
+            background-color: black;
+            color: rgb(238, 192, 40) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="top_header">
+        <hgroup id="title">
+            <h1>미식로그</h1>
+            <p>맛의 발견과 기록</p>
+        </hgroup>
+        <nav>
+            <ul id="navi">
+                <li><a href="#">맛집목록</a>
+                    <ul>
+                        <li><a href="shoplist.html">모든장소</a></li>
+                        <li><a href="#">카페</a></li>
+                        <li><a href="#">밥집</a></li>
+                        <li><a href="#">술집</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">맛집지도</a>
+                    <ul>
+                        <li><a href="map.html">모든장소</a></li>
+                        <li><a href="#">카페</a></li>
+                        <li><a href="#">밥집</a></li>
+                        <li><a href="#">술집</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">리뷰</a>
+                    <ul>
+                        <li><a href="search.html">리뷰검색</a></li>
+                        <li><a href="reviewwrite.html">리뷰작성</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">커뮤니티</a>
+                    <ul>
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="recommend.html">맛집추천</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside id="shopcategory">
+            <aside>
+                <h2>커뮤니티</h2>
+                <a href="notice.html">- 공지사항</a>
+                <a href="recommend.html">- 맛집추천</a>
+                <a href="mypage.html" class="btn">마이페이지</a>
+            </aside>
+        </aside>
+
+        <section id="shoplist">
+            <article>
+                <div class="shoplist">
+                    <h3><a href="#">#1. 웹사이트 사용 방법에 대한 자주 묻는 질문 (FAQ) 업데이트 안내</a></h3>
+                </div>
+            </article>
+
+            <article>
+                <div class="shoplist">
+                    <h3><a href="#">#2. 2024년 여름 시즌 휴가 기간 동안의 고객 지원 및 운영 시간 변경 안내</a></h3>
+                </div>
+            </article>
+
+            <article>
+                <div class="shoplist">
+                    <h3><a href="#">#3. 시스템 업그레이드 및 서버 이전으로 인한 서비스 일시 중단 예정 안내</a></h3>
+                </div>
+            </article>
+
+            <article>
+                <div class="shoplist">
+                    <h3><a href="#">#4. 서비스 개선을 위한 웹사이트 시스템 점검 일정 안내</a></h3>
+                </div>
+            </article>
+
+            <article>
+                <div class="shoplist">
+                    <h3><a href="#">#5. 신규 회원 가입 프로모션 : 특별 혜택 및 이벤트 정보 상세 안내</a></h3>
+                </div>
+            </article>
+
+            <article>
+                <div class="shoplist">
+                    <h3><a href="#">#6. 이메일 시스템 장애 발생 및 긴급 복구 작업 완료 안내</a></h3>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <footer>
+        <nav id="foot">
+            <ul>
+                <li>
+                    <p>문의 : 010-1234-5678 / msh176125@gamil.com<br>(c)2024.msh176125</p>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>2310983 문서현</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #top_header {
+            background-color: rgb(238, 192, 40);
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        #navi {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        #navi li {
+            position: relative;
+            padding: 0 20px;
+        }
+
+        #navi ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            text-align: center;
+            background-color: rgb(238, 192, 40);
+            color: black;
+            width: 150px;
+        }
+
+        #navi li:hover>ul {
+            display: block;
+        }
+
+        #navi li ul li {
+            padding: 10px;
+            text-align: left;
+        }
+
+        #navi li:hover>a {
+            background-color: black;
+            color: rgb(238, 192, 40);
+        }
+
+        li,
+        ul {
+            list-style-type: none;
+            text-align: center;
+            font-weight: bolder;
+            color: black;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #login {
+            color: black;
+            background-color: rgb(238, 192, 40);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            border: 2px solid rgb(238, 192, 40);
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px rgb(238, 192, 40);
+            padding: 20px;
+        }
+
+        .card figure img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        #post {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #foot {
+            background-color: rgb(238, 192, 40);
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        #foot p {
+            color: black;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .top_head {
+            display: grid;
+            grid-template-rows: 1fr 0.05fr;
+        }
+
+        h3 {
+            font-size: large;
+            font-weight: bold;
+        }
+
+        #food {
+            width: 400px;
+            height: 400px;
+        }
+
+        #loginpage {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #loginpage h2 {
+            margin-top: 80px;
+            margin-bottom: 20px;
+        }
+
+        .loginpage {
+            border: 2px solid rgb(238, 192, 40);
+            border-radius: 10px;
+            padding: 20px;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 500px;
+        }
+
+        #loginpage form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #loginpage input[type="text"],
+        #loginpage input[type="password"],
+        #loginpage input[type="submit"],
+        #loginpage input[type="button"] {
+            padding: 10px;
+            font-size: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #loginpage input[type="submit"],
+        #loginpage input[type="button"] {
+            background-color: rgb(238, 192, 40);
+            color: black;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        #loginpage input[type="submit"]:hover,
+        #loginpage input[type="button"]:hover {
+            background-color: black;
+            color: rgb(238, 192, 40);
+        }
+
+        .register-link {
+            margin-top: 10px;
+            text-decoration: underline;
+            cursor: pointer;
+            color: black;
+        }
+
+        .register-link:hover {
+            color: rgb(238, 192, 40);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top_head" id="top_header">
+        <hgroup id="title">
+            <h1>미식로그</h1>
+            <p>맛의 발견과 기록</p>
+        </hgroup>
+        <nav>
+            <ul id="navi">
+                <li><a href="#">맛집목록</a>
+                    <ul>
+                        <li><a href="#">모든장소</a></li>
+                        <li><a href="#">카페</a></li>
+                        <li><a href="#">밥집</a></li>
+                        <li><a href="#">술집</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">맛집지도</a>
+                    <ul>
+                        <li><a href="#">모든장소</a></li>
+                        <li><a href="#">카페</a></li>
+                        <li><a href="#">밥집</a></li>
+                        <li><a href="#">술집</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">리뷰</a>
+                    <ul>
+                        <li><a href="#">리뷰검색</a></li>
+                        <li><a href="#">리뷰작성</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">커뮤니티</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">맛집추천</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="loginpage">
+            <article>
+                <div class="loginpage">
+                    <h2>로그인</h2>
+                    <form action="shoplist.html">
+                        <input type="text" placeholder="아이디">
+                        <input type="password" placeholder="비밀번호">
+                        <input type="submit" value="로그인">
+                    </form>
+                    <a href="signup.html" class="register-link">회원가입</a>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <footer>
+        <nav id="foot">
+            <ul>
+                <li>
+                    <p>문의 : 010-1234-5678 / msh176125@gamil.com<br>(c)2024.msh176125</p>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
